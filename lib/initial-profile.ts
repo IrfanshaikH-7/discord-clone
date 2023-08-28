@@ -1,6 +1,6 @@
 import { currentUser, redirectToSignIn, redirectToSignUp } from "@clerk/nextjs";
 
-import { db } from "@/lib/db";
+import { db } from "@/lib/db";  //models should be called with db 
 
 export const initialProfile = async () => {
     const user = await currentUser();
