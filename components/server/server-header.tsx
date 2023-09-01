@@ -50,6 +50,7 @@ const ServerHeader = ({server,role}: ServerHeaderProps) => {
                 {isAdmin && (
                     <DropdownMenuItem
                     className=" px-3 py-2 text-sm cursor-pointer"
+                    onClick={()=> onOpen('editServer',{ server: server})}
                     >
                         Server settings
                         <Settings  
@@ -61,6 +62,7 @@ const ServerHeader = ({server,role}: ServerHeaderProps) => {
                 {isAdmin && (
                     <DropdownMenuItem
                     className=" px-3 py-2 text-sm cursor-pointer"
+                    onClick={()=> onOpen('members', {server: server})}
                     >
                         Manage members
                         <Users  
@@ -72,6 +74,7 @@ const ServerHeader = ({server,role}: ServerHeaderProps) => {
                 {isModerator && (
                     <DropdownMenuItem
                     className=" px-3 py-2 text-sm cursor-pointer"
+                    onClick={()=> onOpen("createChannel",{server: server})}
                     >
                         Create channel
                         <PlusCircle  
@@ -86,6 +89,7 @@ const ServerHeader = ({server,role}: ServerHeaderProps) => {
                 {isAdmin && (
                     <DropdownMenuItem
                     className=" text-rose-500 px-3 py-2 text-sm cursor-pointer"
+                    onClick={()=> onOpen("deleteServer",{server: server})}
                     >
                         Delete server
                         <Trash
@@ -97,6 +101,7 @@ const ServerHeader = ({server,role}: ServerHeaderProps) => {
                 {!isAdmin && (
                     <DropdownMenuItem
                     className=" text-rose-500 px-3 py-2 text-sm cursor-pointer"
+                    onClick={()=> onOpen("leaveServer",{server: server})}
                     >
                         Leave server
                         <LogOut

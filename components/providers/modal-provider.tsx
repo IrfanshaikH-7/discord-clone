@@ -4,6 +4,11 @@ import { useEffect, useState } from "react";
 
 import CreateServerModel from "../models/create-server-model";
 import InviteModel from "../models/invite-model";
+import EditServerModel from "../models/edit-server-model";
+import MembersModel from "../models/members-model";
+import CreateChannelModel from "../models/create-channel-model copy";
+import LeaveServerModel from "../models/leave-server-model ";
+import DeleteServerModel from "../models/delete-server-model";
 
 
 
@@ -21,6 +26,11 @@ const ModelProvider = () => {
         <>
         <CreateServerModel />
         <InviteModel />
+        <EditServerModel />
+        <MembersModel />
+        <CreateChannelModel />
+        <LeaveServerModel />
+        <DeleteServerModel />
         </>
      );
 }
