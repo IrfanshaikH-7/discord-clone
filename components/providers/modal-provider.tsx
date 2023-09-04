@@ -6,9 +6,12 @@ import CreateServerModel from "../models/create-server-model";
 import InviteModel from "../models/invite-model";
 import EditServerModel from "../models/edit-server-model";
 import MembersModel from "../models/members-model";
-import CreateChannelModel from "../models/create-channel-model copy";
+import CreateChannelModel from "../models/create-channel-model";
 import LeaveServerModel from "../models/leave-server-model ";
 import DeleteServerModel from "../models/delete-server-model";
+import DeleteChannelModel from "../models/delete-channel-model";
+import EditChannelModel from "../models/edit-channel-model";
+import { MessageFileModal } from "../models/message-file-modal";
 
 
 
@@ -31,6 +34,9 @@ const ModelProvider = () => {
         <CreateChannelModel />
         <LeaveServerModel />
         <DeleteServerModel />
+        <DeleteChannelModel />
+        <EditChannelModel />
+        <MessageFileModal />
         </>
      );
 }
